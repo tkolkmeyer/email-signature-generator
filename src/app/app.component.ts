@@ -1,23 +1,16 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from './home/home.component';
+import { EmojiSweatComponent } from './emoji-sweat/emoji-sweat.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent],
+  standalone: true,
+  imports: [HomeComponent, EmojiSweatComponent],
   template: `
     <main>
-      <header class="brand-name">
-        <img class="brand-logo" src="email-signature-generator-logo.png" alt ="logo" aria-hidden="true">
-      </header>
-      <section class="content">
-        <app-home></app-home>
-
-      </section>
+      <app-home></app-home>
+      <app-emoji-sweat></app-emoji-sweat>
     </main>
-    
   `,
-  styles: [],
 })
-export class AppComponent {
-  title = 'email-signature-generator';
-}
+export class AppComponent {}
