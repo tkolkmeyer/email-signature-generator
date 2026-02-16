@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 })
 export class EmojiNailsComponent {
   private readonly signatures = [
-    'with panache,',
-    'tata for now,',
-    'regards sold separately,',
+    'With panache,',
+    'Tata for now,',
+    'Regards sold separately,',
     'XOXO gossip girl,',
-    "i'm just a person,",
+    "I'm just a person,",
     'I have spoken,',
-    'peace out girl scout,',
-    "i'm fine, it's fine, everything is fine,",
-    'another day another slay,',
+    'Peace out girl scout,',
+    "I'm fine, it's fine, everything is fine,",
+    'Another day another slay,',
     'I said what I said,',
   ];
 
