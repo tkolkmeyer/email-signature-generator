@@ -1,0 +1,10 @@
+<button type="button" class="emoji-btn" (click)="pickSignature()">
+  💅
+</button>
+
+@if (selectedSignature) {
+  <div class="signature-preview">
+    <div class="sig-line">{{ selectedSignature }}</div>
+    <div class="sig-name">— Taylor</div>
+  </div>
+}

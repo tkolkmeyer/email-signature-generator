@@ -3,21 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-emoji-sweat',
   standalone: true,
-  template: `
-    <button type="button" class="emoji-btn" (click)="pickSignature()">
-      😅
-    </button>
-
-    @if (selectedSignature) {
-      <div class="signature-preview">
-        <div class="sig-line">{{ selectedSignature }}</div>
-        <div class="sig-name">— Taylor</div>
-      </div>
-    }
-  `,
-  styleUrls: ['./emoji-sweat.component.css'], 
+  templateUrl: './emoji-sweat.component.html',
+  styleUrls: ['./emoji-sweat.component.css'],
 })
-
 export class EmojiSweatComponent {
   private readonly signatures = [
     'On my tippy toes,',
