@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SignatureService } from '../signature.service';
 
 @Component({
   selector: 'app-emoji-sweat',
@@ -17,10 +18,16 @@ export class EmojiSweatComponent {
     'With ongoing regret,',
   ];
 
-  selectedSignature = '';
+  private readonly signatureService = inject(SignatureService);
+
+  get selectedSignature() {
+    return this.signatureService.activeSource() === 'sweat'
+      ? this.signatureService.selectedSignature()
+      : '';
+  }
 
   pickSignature() {
     const i = Math.floor(Math.random() * this.signatures.length);
-    this.selectedSignature = this.signatures[i];
+    this.signatureService.pick('sweat', this.signatures[i]);
   }
 }

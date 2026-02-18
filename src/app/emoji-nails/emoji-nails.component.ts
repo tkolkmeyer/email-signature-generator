@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SignatureService } from '../signature.service';
 
 @Component({
   selector: 'app-emoji-nails',
@@ -20,10 +21,16 @@ export class EmojiNailsComponent {
     'I said what I said,',
   ];
 
-  selectedSignature = '';
+  private readonly signatureService = inject(SignatureService);
+
+  get selectedSignature() {
+    return this.signatureService.activeSource() === 'nails'
+      ? this.signatureService.selectedSignature()
+      : '';
+  }
 
   pickSignature() {
     const i = Math.floor(Math.random() * this.signatures.length);
-    this.selectedSignature = this.signatures[i];
+    this.signatureService.pick('nails', this.signatures[i]);
   }
 }

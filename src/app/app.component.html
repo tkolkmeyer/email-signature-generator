@@ -1,0 +1,12 @@
+<main>
+  <app-home></app-home>
+  <div class="emoji-row">
+    <app-emoji-sweat></app-emoji-sweat>
+    <app-emoji-nails></app-emoji-nails>
+  </div>
+  @if (signatureService.selectedSignature()) {
+    <div class="signature-area">
+      <div class="sig-line">{{ signatureService.selectedSignature() }}</div>
+    </div>
+  }
+</main>
