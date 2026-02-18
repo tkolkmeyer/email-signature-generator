@@ -13,9 +13,11 @@ export class EmojiSweatComponent {
     'Searching for my marbles,',
     'Per my last brain cell,',
     'With green eggs and ham,',
-    'Powered by caffeine and a dream,',
     'Sincerely confused,',
     'With ongoing regret,',
+    'All panic, no disco,',
+    'All blues, no clues',
+    "I'm just a person",
   ];
 
   private readonly signatureService = inject(SignatureService);

@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.emoji-card {
+  width: 140px;
+  padding: 24px 16px;
+  border-radius: 16px;
+  border: 1px solid #e5e5e7;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  text-align: center;
+  user-select: none;
+}
+
+.emoji-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.emoji-card:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.emoji {
+  font-size: 40px;
+  line-height: 1;
+}
