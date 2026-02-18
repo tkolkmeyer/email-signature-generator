@@ -16,8 +16,8 @@ export class EmojiSweatComponent {
     'Sincerely confused,',
     'With ongoing regret,',
     'All panic, no disco,',
-    'All blues, no clues',
-    "I'm just a person",
+    'All blues, no clues,',
+    "I'm just a person,",
   ];
 
   private readonly signatureService = inject(SignatureService);
