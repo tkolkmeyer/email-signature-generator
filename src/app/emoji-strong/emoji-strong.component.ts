@@ -17,6 +17,11 @@ export class EmojiStrongComponent {
     'Godspeed,',
     'Stay dangerous,',
     'On to the next one,',
+    'We move,',
+    'Onward and upward,',
+    'Do it scared,',
+    'Relentlessly,',
+    "Let's get it,",
   ];
 
   private readonly signatureService = inject(SignatureService);

@@ -10,7 +10,7 @@ import { SignatureService } from '../signature.service';
 export class EmojiUpsideDownComponent {
   private readonly signatures = [
     'Have a day,',
-    'Sent from my LG smart washer,',
+    'Sent from my LG Smart Washer,',
     'Damp regards,',
     'I just work here,',
     'Allegedly,',
@@ -18,6 +18,11 @@ export class EmojiUpsideDownComponent {
     'Sent from my Leapfrog Learning Pad,',
     'Hasta la pasta,',
     "Don't quote me on this,",
+    'With plausible deniability,',
+    'Technically speaking,',
+    'Sent from a corn maze,',
+    'This is fine,',
+    'Asking for a friend,',
   ];
 
   private readonly signatureService = inject(SignatureService);

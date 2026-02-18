@@ -13,12 +13,14 @@ export class EmojiNailsComponent {
     'Tata for now,',
     'Regards sold separately,',
     'XOXO gossip girl,',
-    "I'm just a person,",
     'I have spoken,',
     'Peace out girl scout,',
     "I'm fine, it's fine, everything is fine,",
     'Another day another slay,',
     'I said what I said,',
+    'With spite,',
+    'Not taking questions at this time,',
+    "You're welcome,",
   ];
 
   private readonly signatureService = inject(SignatureService);

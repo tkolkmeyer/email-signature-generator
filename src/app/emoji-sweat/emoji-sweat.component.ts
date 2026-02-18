@@ -18,6 +18,9 @@ export class EmojiSweatComponent {
     'All panic, no disco,',
     'All blues, no clues,',
     "I'm just a person,",
+    'Sent from the floor,',
+    'In shambles,',
+    'Send help,',
   ];
 
   private readonly signatureService = inject(SignatureService);
