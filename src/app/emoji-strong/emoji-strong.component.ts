@@ -25,6 +25,7 @@ export class EmojiStrongComponent {
   ];
 
   private readonly signatureService = inject(SignatureService);
+  private pool: number[] = [];
 
   get selectedSignature() {
     return this.signatureService.activeSource() === 'strong'
@@ -33,7 +34,17 @@ export class EmojiStrongComponent {
   }
 
   pickSignature() {
-    const i = Math.floor(Math.random() * this.signatures.length);
-    this.signatureService.pick('strong', this.signatures[i]);
+    if (this.pool.length === 0) {
+      this.pool = this.shuffle(this.signatures.map((_, i) => i));
+    }
+    this.signatureService.pick('strong', this.signatures[this.pool.pop()!]);
+  }
+
+  private shuffle(arr: number[]): number[] {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }
 }
